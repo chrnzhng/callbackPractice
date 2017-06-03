@@ -1,28 +1,33 @@
-/* In this repo your job is to write functions to make each function call work properly.
-Below is a sample problem 
+//  In this repo your job is to write functions to make each function call work properly.
+// Below is a sample problem 
 
-  //code here for sayHi
+//   //code here for sayHi
 
-   sayHi('Hi Katie', function(thingToSay){
-      alert(thingToSay);
-   });
+//     sayHi('Hi Katie', function(thingToSay){
+//       alert(thingToSay);
+//    });
    
-and what you should write is the sayHi function that makes the code above work, 
+// and what you should write is the sayHi function that makes the code above work, 
     
-   var sayHi = function(str, cb){
-    cb(str);
-   }
+//    var sayHi = function(str, cb){
+//     cb(str);
+//    }
 
-   sayHi('Hi Katie', function(thingToSay){
-      alert(thingToSay); //should alert ('Hi Katie')'
-   });
+//    sayHi('Hi Katie', function(thingToSay){
+//       alert(thingToSay); //should alert ('Hi Katie')'
+//    });
     
-*/
+
 
 
 // 1. Write a function called first that returns the first item of the array using a callback function
-
-  // Code Here
+// function first(nombre, fName){
+// fName(nombre[0]);
+// }
+function first(names, callback) {
+var firstName = names[0];
+return callback(firstName);
+}    // Code Here
 
   
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -34,7 +39,10 @@ first(names, function(firstName){
 
 // 2. Write a function called last which returns the last item of the array using a callback function.
 
-  //Code Here
+function last(names, callback) {
+
+return callback(names.slice(-1)[0]);
+}   //Code Here
 
 last(names, function(lastName){
   console.log('The last name in names is ' + lastName);
@@ -46,7 +54,10 @@ last(names, function(lastName){
 
   //Code Here
 
+function multiply(num1, num2, answer){
+  answer(num1 * num2);
 
+}
 multiply(4, 3, function(answer){
   console.log('The answer is ' + answer); //should console.log 12
 })
@@ -57,6 +68,19 @@ multiply(4, 3, function(answer){
 // If it does, return true using the callback, if not return false.
 
   //Code Here 
+function contains(names, arr, result){
+
+  for (var i = 0; i < arr.length; i++){
+    function result(){;
+  }
+  }
+// if(result(arr.indexOf('names')===-1)){
+//   return false;
+// }
+// else {
+//   return true;
+// }
+}
 
 contains(names, 'Colt', function(result){
   if(result === true){
